@@ -1,0 +1,67 @@
+[mysqld]
+wait_timeout=100
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+user=mysql
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+old_passwords=0
+
+bind-address=172.22.12.199
+
+character-set-server = utf8
+collation-server = utf8_general_ci
+character_set_client = utf8
+skip-character-set-client-handshake
+
+key_buffer = 32M
+max_allowed_packet = 100M
+sort_buffer_size = 32M
+read_buffer_size = 16M
+read_rnd_buffer_size = 32M
+myisam_sort_buffer_size = 1M
+thread_cache_size = 300
+query_cache_size= 128M
+query_cache_limit = 64M
+# Try number of CPU's*2 for thread_concurrency
+thread_concurrency = 16
+table_cache = 100000
+table_definition_cache = 45000
+max-connections = 2000
+ft_min_word_len=3
+
+#low_priority_updates=1
+
+join_buffer_size = 4M
+
+tmp_table_size = 1G
+max_heap_table_size = 128M
+
+innodb_file_per_table
+innodb_buffer_pool_size = 2G
+innodb_additional_mem_pool_size = 32M
+innodb_flush_log_at_trx_commit = 2
+
+#log=/var/lib/mysql/query.log
+slow_query_log=1
+slow_query_log_file=/var/log/mysql/mysql-slow.log
+long_query_time = 5
+
+tmpdir=/var/lib/mysql/
+
+server-id = 1
+auto_increment_increment = 2
+auto_increment_offset = 1
+replicate-same-server-id = 0
+
+log-bin = mysql-bin
+log-slave-updates
+sync_binlog = 1
+binlog-format = ROW
+expire_logs_days = 3
+relay-log = /var/lib/mysql/relay-bin
+relay-log-index = /var/lib/mysql/relay-bin.index
+relay-log-info-file = /var/lib/mysql/relay-bin.info 
+
+slave-skip-errors=1062
+slave-exec-mode=IDEMPOTENT
