@@ -85,6 +85,7 @@ prompt_context() {}
 
 export PATH=$PATH:/usr/local/sbin
 export PATH=$HOME/.toolbox/bin:$PATH
+export PATH=$HOME/IdeaProjects/Github/darken99/misc:$PATH
 export PATH=$(python3 -m site --user-base)/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
