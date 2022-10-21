@@ -10,5 +10,4 @@ fi
 
 # User specific aliases and functions
 
-export PATH=$HOME/.toolbox/bin:$HOME/IdeaProjects/Github/darken99/misc/:$PATH
 export JAVA_TOOLS_OPTIONS="-Dlog4j2.formatMsgNoLookups=true"
