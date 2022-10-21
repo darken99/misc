@@ -1,0 +1,34 @@
+Host *
+    ServerAliveInterval 300
+    ServerAliveCountMax 2
+
+
+host *.amazon.com
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+
+# Midway auth to GitFarm
+Host git.amazon.com
+    # GSSAPIAuthentication no
+    PreferredAuthentications publickey,gssapi-with-mic,keyboard-interactive
+
+# workshop.aws
+Host git-codecommit.*.amazonaws.com
+  User APKAUTX7GE3CNWL4KQIT
+  IdentityFile ~/.ssh/id_rsa
+
+# SSH over Session Manager
+Host i-* mi-*
+    ProxyCommand sh -c "aws --profile omoskale ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
+
+Host openmbr_cdd
+    HostName omoskale-cdd.aka.corp.amazon.com
+    GSSAPIDelegateCredentials yes
+
+Host darken-mac
+    HostName 192.168.1.17
+    User oleksandrmoskalenko
+
+#Host illya
+#    HostName 192.168.1.17
+#    User oleksandrmoskalenko
