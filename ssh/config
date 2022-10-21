@@ -19,16 +19,8 @@ Host git-codecommit.*.amazonaws.com
 
 # SSH over Session Manager
 Host i-* mi-*
-    ProxyCommand sh -c "aws --profile omoskale ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
-
-Host openmbr_cdd
-    HostName omoskale-cdd.aka.corp.amazon.com
-    GSSAPIDelegateCredentials yes
+    ProxyCommand sh -c "aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"
 
 Host darken-mac
     HostName 192.168.1.17
     User oleksandrmoskalenko
-
-#Host illya
-#    HostName 192.168.1.17
-#    User oleksandrmoskalenko
