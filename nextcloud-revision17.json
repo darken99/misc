@@ -1,0 +1,154 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:eu-central-1:563587976576:task-definition/nextcloud:17",
+    "containerDefinitions": [
+        {
+            "name": "nextcloud",
+            "image": "nextcloud:latest",
+            "cpu": 0,
+            "memoryReservation": 8192,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [
+                "sh",
+                "-x",
+                "/entrypoint.sh"
+            ],
+            "command": [
+                "apache2-foreground"
+            ],
+            "environment": [
+                {
+                    "name": "POSTGRES_USER",
+                    "value": "postgres"
+                },
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "value": "x_dj+B)DpfTt>yoNgqV5kiN}"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "value": "nextcloud"
+                },
+                {
+                    "name": "POSTGRES_HOST",
+                    "value": "nextcloud-pgsql.cluster-ctifv9bf66zq.eu-central-1.rds.amazonaws.com"
+                }
+            ],
+            "mountPoints": [
+                {
+                    "sourceVolume": "nextcloud",
+                    "containerPath": "/var/www/html"
+                }
+            ],
+            "volumesFrom": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "dockerSecurityOptions": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/nextcloud",
+                    "awslogs-region": "eu-central-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "systemControls": []
+        }
+    ],
+    "family": "nextcloud",
+    "taskRoleArn": "arn:aws:iam::563587976576:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::563587976576:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 17,
+    "volumes": [
+        {
+            "name": "nextcloud",
+            "efsVolumeConfiguration": {
+                "fileSystemId": "fs-cd6c1195",
+                "rootDirectory": "/",
+                "transitEncryption": "ENABLED",
+                "authorizationConfig": {
+                    "accessPointId": "fsap-0a9f8a4ad308a2f00",
+                    "iam": "DISABLED"
+                }
+            }
+        }
+    ],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "ecs.capability.efsAuth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "ecs.capability.efs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.25"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "8192",
+    "registeredAt": "2022-08-16T10:42:02.840Z",
+    "registeredBy": "arn:aws:sts::563587976576:assumed-role/Admin/omoskale-Isengard",
+    "tags": [
+        {
+            "key": "Project",
+            "value": "NextCloud"
+        },
+        {
+            "key": "auto-stop",
+            "value": "no"
+        },
+        {
+            "key": "ecs:taskDefinition:createdFrom",
+            "value": "ecs-console-v2"
+        },
+        {
+            "key": "auto-delete",
+            "value": "no"
+        },
+        {
+            "key": "ecs:taskDefinition:stackId",
+            "value": "arn:aws:cloudformation:eu-central-1:563587976576:stack/ECS-Console-V2-TaskDefinition-ef910022-8bd6-4844-a9ed-08ddb3717981/7ac09750-1d4e-11ed-99ba-0674b4cef20c"
+        }
+    ]
+}
