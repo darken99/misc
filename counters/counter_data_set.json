@@ -1,0 +1,74 @@
+{
+    "Status": 200,
+    "DataSet": {
+        "Arn": "arn:aws:quicksight:eu-west-1:563587976576:dataset/999e1bd5-3f86-439b-a533-e8da43a5ac3c",
+        "DataSetId": "999e1bd5-3f86-439b-a533-e8da43a5ac3c",
+        "Name": "omoskale_counters",
+        "CreatedTime": "2021-07-27T13:11:48.375000+02:00",
+        "LastUpdatedTime": "2022-11-01T00:02:21.396000+01:00",
+        "PhysicalTableMap": {
+            "e0ebb493-c797-49e2-b3c3-ec327b308247": {
+                "RelationalTable": {
+                    "DataSourceArn": "arn:aws:quicksight:eu-west-1:563587976576:datasource/a4a70185-5ebd-42e6-b762-be4505c3a016",
+                    "Catalog": "AwsDataCatalog",
+                    "Schema": "default",
+                    "Name": "omoskale_counters",
+                    "InputColumns": [
+                        {
+                            "Name": "date",
+                            "Type": "DATETIME"
+                        },
+                        {
+                            "Name": "category",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "value",
+                            "Type": "DECIMAL"
+                        }
+                    ]
+                }
+            }
+        },
+        "LogicalTableMap": {
+            "e0ebb493-c797-49e2-b3c3-ec327b308247": {
+                "Alias": "omoskale_counters",
+                "DataTransforms": [
+                    {
+                        "ProjectOperation": {
+                            "ProjectedColumns": [
+                                "date",
+                                "category",
+                                "value"
+                            ]
+                        }
+                    }
+                ],
+                "Source": {
+                    "PhysicalTableId": "e0ebb493-c797-49e2-b3c3-ec327b308247"
+                }
+            }
+        },
+        "OutputColumns": [
+            {
+                "Name": "date",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "category",
+                "Type": "STRING"
+            },
+            {
+                "Name": "value",
+                "Type": "DECIMAL"
+            }
+        ],
+        "ImportMode": "SPICE",
+        "ConsumedSpiceCapacityInBytes": 3944,
+        "DataSetUsageConfiguration": {
+            "DisableUseAsDirectQuerySource": false,
+            "DisableUseAsImportedSource": false
+        }
+    },
+    "RequestId": "4b786b7c-c2d1-4526-895f-257d69eff23d"
+}

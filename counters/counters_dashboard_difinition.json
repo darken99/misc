@@ -1,0 +1,779 @@
+{
+    "Status": 200,
+    "DashboardId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3",
+    "Name": "Counters",
+    "ThemeArn": "arn:aws:quicksight::aws:theme/MIDNIGHT",
+    "Definition": {
+        "DataSetIdentifierDeclarations": [
+            {
+                "Identifier": "omoskale_counters",
+                "DataSetArn": "arn:aws:quicksight:eu-west-1:563587976576:dataset/999e1bd5-3f86-439b-a533-e8da43a5ac3c"
+            }
+        ],
+        "Sheets": [
+            {
+                "SheetId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_26bd4b39-3528-476e-acaa-48d8935256b3",
+                "Name": "Charts",
+                "Visuals": [
+                    {
+                        "ComboChartVisual": {
+                            "VisualId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_3683dc03-becf-4890-a889-d58abce86d6f",
+                            "Title": {
+                                "Visibility": "VISIBLE",
+                                "FormatText": {
+                                    "PlainText": "Heating Consumption, GJ"
+                                }
+                            },
+                            "Subtitle": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "ChartConfiguration": {
+                                "FieldWells": {
+                                    "ComboChartAggregatedFieldWells": {
+                                        "Category": [
+                                            {
+                                                "DateDimensionField": {
+                                                    "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "date"
+                                                    },
+                                                    "HierarchyId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                    "FormatConfiguration": {
+                                                        "DateTimeFormat": "MMM YYYY"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "BarValues": [
+                                            {
+                                                "NumericalMeasureField": {
+                                                    "FieldId": "3c9f5979-754f-4854-8193-3cdb5a62bcf7.2.1617466614637",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "_value"
+                                                    },
+                                                    "FormatConfiguration": {
+                                                        "FormatConfiguration": {
+                                                            "NumberDisplayFormatConfiguration": {
+                                                                "SeparatorConfiguration": {
+                                                                    "ThousandsSeparator": {
+                                                                        "Visibility": "VISIBLE"
+                                                                    }
+                                                                },
+                                                                "DecimalPlacesConfiguration": {
+                                                                    "DecimalPlaces": 2
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Colors": [
+                                            {
+                                                "CategoricalDimensionField": {
+                                                    "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-2.2.1605105998369",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "category"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "LineValues": []
+                                    }
+                                },
+                                "SortConfiguration": {
+                                    "CategorySort": [
+                                        {
+                                            "FieldSort": {
+                                                "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                "Direction": "ASC"
+                                            }
+                                        }
+                                    ],
+                                    "CategoryItemsLimit": {
+                                        "OtherCategories": "INCLUDE"
+                                    },
+                                    "ColorItemsLimit": {
+                                        "OtherCategories": "INCLUDE"
+                                    }
+                                },
+                                "BarsArrangement": "CLUSTERED",
+                                "CategoryAxis": {
+                                    "TickLabelOptions": {
+                                        "LabelOptions": {
+                                            "Visibility": "VISIBLE"
+                                        },
+                                        "RotationAngle": 0.0
+                                    },
+                                    "AxisLineVisibility": "VISIBLE"
+                                },
+                                "Legend": {
+                                    "Title": {
+                                        "Visibility": "HIDDEN"
+                                    },
+                                    "Width": "100px"
+                                },
+                                "BarDataLabels": {
+                                    "Visibility": "HIDDEN",
+                                    "Position": "INSIDE",
+                                    "Overlap": "DISABLE_OVERLAP"
+                                },
+                                "VisualPalette": {
+                                    "ChartColor": "#DE3B00",
+                                    "ColorMap": [
+                                        {
+                                            "Element": {
+                                                "FieldValue": "Cold Water"
+                                            },
+                                            "Color": "#0251D3"
+                                        },
+                                        {
+                                            "Element": {
+                                                "FieldValue": "Heating"
+                                            },
+                                            "Color": "#FC850D"
+                                        }
+                                    ]
+                                }
+                            },
+                            "Actions": [],
+                            "ColumnHierarchies": [
+                                {
+                                    "DateTimeHierarchy": {
+                                        "HierarchyId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "BarChartVisual": {
+                            "VisualId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_e106a06b-a142-434e-b901-79354bb90518",
+                            "Title": {
+                                "Visibility": "VISIBLE",
+                                "FormatText": {
+                                    "PlainText": "Water Consumption"
+                                }
+                            },
+                            "Subtitle": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "ChartConfiguration": {
+                                "FieldWells": {
+                                    "BarChartAggregatedFieldWells": {
+                                        "Category": [
+                                            {
+                                                "DateDimensionField": {
+                                                    "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "date"
+                                                    },
+                                                    "HierarchyId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                    "FormatConfiguration": {
+                                                        "DateTimeFormat": "MMM YYYY"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Values": [
+                                            {
+                                                "NumericalMeasureField": {
+                                                    "FieldId": "3c9f5979-754f-4854-8193-3cdb5a62bcf7.2.1617466614637",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "_value"
+                                                    },
+                                                    "FormatConfiguration": {
+                                                        "FormatConfiguration": {
+                                                            "NumberDisplayFormatConfiguration": {
+                                                                "SeparatorConfiguration": {
+                                                                    "ThousandsSeparator": {
+                                                                        "Visibility": "VISIBLE"
+                                                                    }
+                                                                },
+                                                                "DecimalPlacesConfiguration": {
+                                                                    "DecimalPlaces": 2
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Colors": [
+                                            {
+                                                "CategoricalDimensionField": {
+                                                    "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-2.2.1605105998369",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "category"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "SortConfiguration": {
+                                    "CategorySort": [
+                                        {
+                                            "FieldSort": {
+                                                "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                "Direction": "ASC"
+                                            }
+                                        }
+                                    ],
+                                    "CategoryItemsLimit": {
+                                        "OtherCategories": "INCLUDE"
+                                    },
+                                    "ColorItemsLimit": {
+                                        "OtherCategories": "INCLUDE"
+                                    },
+                                    "SmallMultiplesLimitConfiguration": {
+                                        "OtherCategories": "INCLUDE"
+                                    }
+                                },
+                                "Orientation": "VERTICAL",
+                                "BarsArrangement": "CLUSTERED",
+                                "VisualPalette": {
+                                    "ChartColor": "#DE3B00",
+                                    "ColorMap": [
+                                        {
+                                            "Element": {
+                                                "FieldValue": "Cold Water"
+                                            },
+                                            "Color": "#0251D3"
+                                        }
+                                    ]
+                                },
+                                "CategoryAxis": {
+                                    "TickLabelOptions": {
+                                        "LabelOptions": {
+                                            "Visibility": "VISIBLE"
+                                        },
+                                        "RotationAngle": 0.0
+                                    },
+                                    "AxisLineVisibility": "VISIBLE"
+                                },
+                                "Legend": {
+                                    "Title": {
+                                        "Visibility": "HIDDEN"
+                                    },
+                                    "Width": "100px"
+                                },
+                                "DataLabels": {
+                                    "Visibility": "VISIBLE",
+                                    "Position": "OUTSIDE",
+                                    "Overlap": "DISABLE_OVERLAP"
+                                },
+                                "Tooltip": {
+                                    "TooltipVisibility": "VISIBLE",
+                                    "SelectedTooltipType": "BASIC",
+                                    "FieldBasedTooltip": {
+                                        "AggregationVisibility": "HIDDEN",
+                                        "TooltipTitleType": "PRIMARY_VALUE",
+                                        "TooltipFields": [
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            },
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-2.2.1605105998369",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            },
+                                            {
+                                                "FieldTooltipItem": {
+                                                    "FieldId": "3c9f5979-754f-4854-8193-3cdb5a62bcf7.2.1617466614637",
+                                                    "Visibility": "VISIBLE"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "Actions": [],
+                            "ColumnHierarchies": [
+                                {
+                                    "DateTimeHierarchy": {
+                                        "HierarchyId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "ComboChartVisual": {
+                            "VisualId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_86169667-86db-44ac-b130-d480f1b78422",
+                            "Title": {
+                                "Visibility": "VISIBLE",
+                                "FormatText": {
+                                    "PlainText": "Power Consumption kW/h"
+                                }
+                            },
+                            "Subtitle": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "ChartConfiguration": {
+                                "FieldWells": {
+                                    "ComboChartAggregatedFieldWells": {
+                                        "Category": [
+                                            {
+                                                "DateDimensionField": {
+                                                    "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "date"
+                                                    },
+                                                    "DateGranularity": "MONTH",
+                                                    "HierarchyId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                    "FormatConfiguration": {
+                                                        "DateTimeFormat": "MMM YYYY"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "BarValues": [
+                                            {
+                                                "NumericalMeasureField": {
+                                                    "FieldId": "3c9f5979-754f-4854-8193-3cdb5a62bcf7.2.1617466608047",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "_value"
+                                                    },
+                                                    "FormatConfiguration": {
+                                                        "FormatConfiguration": {
+                                                            "NumberDisplayFormatConfiguration": {
+                                                                "SeparatorConfiguration": {
+                                                                    "ThousandsSeparator": {
+                                                                        "Visibility": "VISIBLE"
+                                                                    }
+                                                                },
+                                                                "DecimalPlacesConfiguration": {
+                                                                    "DecimalPlaces": 2
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Colors": [
+                                            {
+                                                "CategoricalDimensionField": {
+                                                    "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-2.2.1605105998369",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "category"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "LineValues": []
+                                    }
+                                },
+                                "SortConfiguration": {
+                                    "CategorySort": [
+                                        {
+                                            "FieldSort": {
+                                                "FieldId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167",
+                                                "Direction": "ASC"
+                                            }
+                                        }
+                                    ],
+                                    "CategoryItemsLimit": {
+                                        "OtherCategories": "INCLUDE"
+                                    },
+                                    "ColorItemsLimit": {
+                                        "OtherCategories": "INCLUDE"
+                                    }
+                                },
+                                "BarsArrangement": "CLUSTERED",
+                                "CategoryAxis": {
+                                    "TickLabelOptions": {
+                                        "RotationAngle": 0.0
+                                    },
+                                    "DataOptions": {
+                                        "DateAxisOptions": {
+                                            "MissingDateVisibility": "HIDDEN"
+                                        }
+                                    },
+                                    "ScrollbarOptions": {
+                                        "VisibleRange": {
+                                            "PercentRange": {
+                                                "From": 53.52272727272728,
+                                                "To": 100.0
+                                            }
+                                        }
+                                    }
+                                },
+                                "PrimaryYAxisDisplayOptions": {
+                                    "TickLabelOptions": {
+                                        "LabelOptions": {
+                                            "Visibility": "VISIBLE"
+                                        }
+                                    },
+                                    "GridLineVisibility": "VISIBLE"
+                                },
+                                "PrimaryYAxisLabelOptions": {
+                                    "Visibility": "VISIBLE"
+                                },
+                                "Legend": {
+                                    "Title": {
+                                        "Visibility": "HIDDEN"
+                                    },
+                                    "Width": "100px"
+                                },
+                                "BarDataLabels": {
+                                    "Visibility": "HIDDEN",
+                                    "Position": "OUTSIDE",
+                                    "Overlap": "DISABLE_OVERLAP"
+                                }
+                            },
+                            "Actions": [],
+                            "ColumnHierarchies": [
+                                {
+                                    "DateTimeHierarchy": {
+                                        "HierarchyId": "f16af7a7-570b-4fa6-aab2-32d5323b2d11.ColumnId-1.2.1605104735167"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "Layouts": [
+                    {
+                        "Configuration": {
+                            "GridLayout": {
+                                "Elements": [
+                                    {
+                                        "ElementId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_86169667-86db-44ac-b130-d480f1b78422",
+                                        "ElementType": "VISUAL",
+                                        "ColumnIndex": 0,
+                                        "ColumnSpan": 36,
+                                        "RowIndex": 0,
+                                        "RowSpan": 13
+                                    },
+                                    {
+                                        "ElementId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_e106a06b-a142-434e-b901-79354bb90518",
+                                        "ElementType": "VISUAL",
+                                        "ColumnIndex": 0,
+                                        "ColumnSpan": 18,
+                                        "RowIndex": 13,
+                                        "RowSpan": 13
+                                    },
+                                    {
+                                        "ElementId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_3683dc03-becf-4890-a889-d58abce86d6f",
+                                        "ElementType": "VISUAL",
+                                        "ColumnIndex": 18,
+                                        "ColumnSpan": 18,
+                                        "RowIndex": 13,
+                                        "RowSpan": 13
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "ContentType": "INTERACTIVE"
+            },
+            {
+                "SheetId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_5b596eab-5c0c-49b7-8f91-18079b23d38d",
+                "Name": "Table",
+                "Visuals": [
+                    {
+                        "PivotTableVisual": {
+                            "VisualId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_89557212-602d-4e8e-808a-11f0bcdf5412",
+                            "Title": {
+                                "Visibility": "VISIBLE",
+                                "FormatText": {
+                                    "PlainText": "Utilities consumption"
+                                }
+                            },
+                            "Subtitle": {
+                                "Visibility": "VISIBLE"
+                            },
+                            "ChartConfiguration": {
+                                "FieldWells": {
+                                    "PivotTableAggregatedFieldWells": {
+                                        "Rows": [
+                                            {
+                                                "DateDimensionField": {
+                                                    "FieldId": "b3216dc1-b3d1-4bb9-b87a-48c7397e2cdf.date.1.1617469104513",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "date"
+                                                    },
+                                                    "DateGranularity": "MONTH"
+                                                }
+                                            }
+                                        ],
+                                        "Columns": [
+                                            {
+                                                "CategoricalDimensionField": {
+                                                    "FieldId": "b3216dc1-b3d1-4bb9-b87a-48c7397e2cdf.category.2.1617469104894",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "category"
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "Values": [
+                                            {
+                                                "NumericalMeasureField": {
+                                                    "FieldId": "3c9f5979-754f-4854-8193-3cdb5a62bcf7.2.1617469216973",
+                                                    "Column": {
+                                                        "DataSetIdentifier": "omoskale_counters",
+                                                        "ColumnName": "_value"
+                                                    },
+                                                    "FormatConfiguration": {
+                                                        "FormatConfiguration": {
+                                                            "NumberDisplayFormatConfiguration": {
+                                                                "SeparatorConfiguration": {
+                                                                    "ThousandsSeparator": {
+                                                                        "Visibility": "VISIBLE"
+                                                                    }
+                                                                },
+                                                                "DecimalPlacesConfiguration": {
+                                                                    "DecimalPlaces": 2
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                "SortConfiguration": {
+                                    "FieldSortOptions": [
+                                        {
+                                            "FieldId": "b3216dc1-b3d1-4bb9-b87a-48c7397e2cdf.date.1.1617469104513",
+                                            "SortBy": {
+                                                "Field": {
+                                                    "FieldId": "b3216dc1-b3d1-4bb9-b87a-48c7397e2cdf.date.1.1617469104513",
+                                                    "Direction": "DESC"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                "TableOptions": {
+                                    "SingleMetricVisibility": "HIDDEN",
+                                    "ColumnNamesVisibility": "HIDDEN",
+                                    "ColumnHeaderStyle": {
+                                        "TextWrap": "NONE"
+                                    },
+                                    "CellStyle": {
+                                        "TextWrap": "NONE"
+                                    }
+                                },
+                                "FieldOptions": {
+                                    "SelectedFieldOptions": [
+                                        {
+                                            "FieldId": "b3216dc1-b3d1-4bb9-b87a-48c7397e2cdf.date.1.1617469104513",
+                                            "Visibility": "VISIBLE"
+                                        },
+                                        {
+                                            "FieldId": "b3216dc1-b3d1-4bb9-b87a-48c7397e2cdf.category.2.1617469104894",
+                                            "Visibility": "VISIBLE"
+                                        },
+                                        {
+                                            "FieldId": "3c9f5979-754f-4854-8193-3cdb5a62bcf7.2.1617469216973",
+                                            "Visibility": "VISIBLE"
+                                        }
+                                    ]
+                                }
+                            },
+                            "Actions": []
+                        }
+                    }
+                ],
+                "Layouts": [
+                    {
+                        "Configuration": {
+                            "GridLayout": {
+                                "Elements": [
+                                    {
+                                        "ElementId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_89557212-602d-4e8e-808a-11f0bcdf5412",
+                                        "ElementType": "VISUAL",
+                                        "ColumnIndex": 0,
+                                        "ColumnSpan": 35,
+                                        "RowIndex": 0,
+                                        "RowSpan": 14
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "ContentType": "INTERACTIVE"
+            }
+        ],
+        "CalculatedFields": [
+            {
+                "Name": "Cold Water",
+                "Expression": "difference(\n     sum( {fe30ed5f-64c8-43a0-9347-685e7c801d32.ColumnId-3} ), \n     [{fe30ed5f-64c8-43a0-9347-685e7c801d32.ColumnId-1} ASC],\n     -1\n)"
+            },
+            {
+                "Name": "Heating_",
+                "Expression": "difference(\n     sum( {fe30ed5f-64c8-43a0-9347-685e7c801d32.ColumnId-2} ), \n     [{fe30ed5f-64c8-43a0-9347-685e7c801d32.ColumnId-1} ASC],\n     -1\n)"
+            },
+            {
+                "Name": "Hot Water",
+                "Expression": "difference(\n     sum({fe30ed5f-64c8-43a0-9347-685e7c801d32.ColumnId-4}), \n     [{fe30ed5f-64c8-43a0-9347-685e7c801d32.ColumnId-1} ASC],\n     -1\n)"
+            },
+            {
+                "DataSetIdentifier": "omoskale_counters",
+                "Name": "_value",
+                "Expression": "ifelse(( difference(sum(value), [date ASC], -1, [category] ) >= 0), difference(sum(value), [date ASC], -1, [category] ), sum(value))"
+            }
+        ],
+        "ParameterDeclarations": [],
+        "FilterGroups": [
+            {
+                "FilterGroupId": "003e3a67-b102-439b-930c-4cc92c6db003",
+                "Filters": [
+                    {
+                        "CategoryFilter": {
+                            "FilterId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_823b9e8d-e71f-4903-81f8-8738dda74591",
+                            "Column": {
+                                "DataSetIdentifier": "omoskale_counters",
+                                "ColumnName": "category"
+                            },
+                            "Configuration": {
+                                "FilterListConfiguration": {
+                                    "MatchOperator": "CONTAINS",
+                                    "CategoryValues": [
+                                        "Power"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "ScopeConfiguration": {
+                    "SelectedSheets": {
+                        "SheetVisualScopingConfigurations": [
+                            {
+                                "SheetId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_26bd4b39-3528-476e-acaa-48d8935256b3",
+                                "Scope": "SELECTED_VISUALS",
+                                "VisualIds": [
+                                    "e6dcc1de-d8eb-4893-914b-af04b1f18de3_86169667-86db-44ac-b130-d480f1b78422"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "Status": "ENABLED",
+                "CrossDataset": "SINGLE_DATASET"
+            },
+            {
+                "FilterGroupId": "28044086-71e4-4fe8-8dab-c7d12df8056a",
+                "Filters": [
+                    {
+                        "CategoryFilter": {
+                            "FilterId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_467415ce-c284-4d11-b4b5-0992735fab1e",
+                            "Column": {
+                                "DataSetIdentifier": "omoskale_counters",
+                                "ColumnName": "category"
+                            },
+                            "Configuration": {
+                                "FilterListConfiguration": {
+                                    "MatchOperator": "CONTAINS",
+                                    "CategoryValues": [
+                                        "Cold Water",
+                                        "Hot Water"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "ScopeConfiguration": {
+                    "SelectedSheets": {
+                        "SheetVisualScopingConfigurations": [
+                            {
+                                "SheetId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_26bd4b39-3528-476e-acaa-48d8935256b3",
+                                "Scope": "SELECTED_VISUALS",
+                                "VisualIds": [
+                                    "e6dcc1de-d8eb-4893-914b-af04b1f18de3_e106a06b-a142-434e-b901-79354bb90518"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "Status": "ENABLED",
+                "CrossDataset": "SINGLE_DATASET"
+            },
+            {
+                "FilterGroupId": "8cad4f9c-12e3-47b1-a451-6b16499583dd",
+                "Filters": [
+                    {
+                        "CategoryFilter": {
+                            "FilterId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_998f95e9-dcae-437b-9cf3-afb124bdbf04",
+                            "Column": {
+                                "DataSetIdentifier": "omoskale_counters",
+                                "ColumnName": "category"
+                            },
+                            "Configuration": {
+                                "FilterListConfiguration": {
+                                    "MatchOperator": "CONTAINS",
+                                    "CategoryValues": [
+                                        "Heating"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                ],
+                "ScopeConfiguration": {
+                    "SelectedSheets": {
+                        "SheetVisualScopingConfigurations": [
+                            {
+                                "SheetId": "e6dcc1de-d8eb-4893-914b-af04b1f18de3_26bd4b39-3528-476e-acaa-48d8935256b3",
+                                "Scope": "SELECTED_VISUALS",
+                                "VisualIds": [
+                                    "e6dcc1de-d8eb-4893-914b-af04b1f18de3_3683dc03-becf-4890-a889-d58abce86d6f"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "Status": "ENABLED",
+                "CrossDataset": "SINGLE_DATASET"
+            }
+        ],
+        "ColumnConfigurations": [
+            {
+                "Column": {
+                    "DataSetIdentifier": "omoskale_counters",
+                    "ColumnName": "date"
+                },
+                "Role": "DIMENSION"
+            }
+        ],
+        "AnalysisDefaults": {
+            "DefaultNewSheetConfiguration": {
+                "InteractiveLayoutConfiguration": {
+                    "Grid": {
+                        "CanvasSizeOptions": {
+                            "ScreenCanvasSizeOptions": {
+                                "ResizeOption": "RESPONSIVE"
+                            }
+                        }
+                    }
+                },
+                "SheetContentType": "INTERACTIVE"
+            }
+        }
+    },
+    "RequestId": "df7be04d-3431-4c7f-b7a0-9d0b07a7cfc0"
+}
